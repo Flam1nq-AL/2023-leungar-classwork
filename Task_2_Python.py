@@ -1,3 +1,4 @@
+
 import re
 
 
@@ -29,3 +30,4 @@ class Users:
 adrian = Users('Adrian', 'Leung', 'adrianleung@live.com', 'Hihi12345')
 adrian.check_password(adrian.password)
 adrian.check_email(adrian.email)
+>>>>>> > 147d255dcb781f6eea98f6888113d05b91d30d1c
