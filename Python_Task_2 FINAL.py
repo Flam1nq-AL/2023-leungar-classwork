@@ -1,7 +1,7 @@
 import re
 
 
-class Users:
+class Users():
     def __init__(self, first_name, surname, email, password):
         self.first_name = first_name
         self.surname = surname
@@ -26,6 +26,6 @@ class Users:
             print('Invalid Password')
 
 
-adrian = Users('Adrian', 'Leung', 'adrianleung@live.com', 'Hihi12345')
+adrian = Users('Adrian', 'Leung', 'adrian.leung@live.com', 'Hihi12345')
 adrian.check_password(adrian.password)
 adrian.check_email(adrian.email)
