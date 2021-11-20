@@ -5,6 +5,7 @@ def binarysearch(mylist, item):
     found = False
     while found == False:
         middle = (first + last) // 2
+        print(mylist[middle])
         if mylist[middle] == item:
             found = True
             index = middle
@@ -25,10 +26,7 @@ def linearsearch(mylist, item):
     return i
 
 
-print(binarysearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-                    11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 2))
+print(binarysearch([5, 13, 16, 19, 26, 35, 37, 57, 86, 90, 93, 98], 90))
 
 print(linearsearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
                     11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 2))
-
-

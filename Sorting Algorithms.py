@@ -22,13 +22,23 @@ def insertionsort(mylist):
 
     return mylist
 
+
+def partition(mylist):
+    a = mylist[:len(mylist)//2]
+    b = mylist[len(mylist)//2:]
+    print(a, b)
+
+
+partition([1, 2, 3, 4, 5, 6])
+
+
 def mergesort(mylist):
-    middle = len(mylist) // 2 
+    middle = len(mylist) // 2
     list1 = mylist[:(len(mylist) // 2) + 1]
-    list2 = mylist[]
-    
+
+
 def quicksort(mylist):
-    
+    pass
 
 
 print(bubblesort([1, 5, 8, 2, 89, 43, 123, 5687, 1234, 8, 2, 7, 4, 43, 3, 8]))
