@@ -1,3 +1,6 @@
+import time
+import random
+
 def bubblesort(mylist):
     finish = False
     while finish == False:
@@ -19,29 +22,17 @@ def insertionsort(mylist):
             mylist[currentpos] = mylist[currentpos-1]
             currentpos -= 1
         mylist[currentpos] = currentval
-
     return mylist
 
+mylist = random.sample(range(1,1000000),1000)
+mylist2 = random.sample(range(1,1000000),1000)
 
-def partition(mylist):
-    a = mylist[:len(mylist)//2]
-    b = mylist[len(mylist)//2:]
-    print(a, b)
+start = time.time()
+insertionsort(mylist)
+end = time.time()
+start2=time.time()
+bubblesort(mylist2)
+end2=time.time()
+print(f'(ms) Insertion {(end-start) * 1000} | Bubble {(end2-start2) * 1000}')
 
-
-partition([1, 2, 3, 4, 5, 6])
-
-
-def mergesort(mylist):
-    middle = len(mylist) // 2
-    list1 = mylist[:(len(mylist) // 2) + 1]
-
-
-def quicksort(mylist):
-    pass
-
-
-print(bubblesort([1, 5, 8, 2, 89, 43, 123, 5687, 1234, 8, 2, 7, 4, 43, 3, 8]))
-
-print(insertionsort([1, 5, 8, 2, 89, 43, 123,
-                     5687, 1234, 8, 2, 7, 4, 43, 3, 8]))
+# Insertion Sort is consistently faster than bubblesort for all values of n
